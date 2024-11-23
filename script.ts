@@ -80,10 +80,12 @@ todos_container.addEventListener("click", (e) => {
 
 // * Remove all data or clear all data
 clear_All_Todos_btn_elm.addEventListener("click", () => {
-  if(todos_container.innerHTML.length == 0){
-    alert("There are no todo items available")
+  /// * If there are not todo item available to remove
+  if (todos_container.innerHTML.length == 0) {
+    alert("There are no todo items available");
     return;
   }
+
   const confirm = window.confirm("Do you want to RemoveClear all Todos");
   if (confirm) {
     todos_container.innerHTML = "";
