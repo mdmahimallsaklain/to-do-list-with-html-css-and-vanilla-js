@@ -21,4 +21,4 @@ This is a simple **Todo List** application built with **Vanilla JavaScript** and
 
 1. Clone the repository to your local machine:
    ```bash
-   git clone https://github.com/your-username/todo-app.git
+   git clone https://github.com/mdmahimallsaklain/to-do-list-with-html-css-and-vanilla-js.git

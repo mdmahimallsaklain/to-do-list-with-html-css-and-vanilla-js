@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  outline: none;
+  border: none;
+}
+
+body {
+  background: linear-gradient(54deg, green, rgba(0, 0, 255, 0.515), rgba(255, 166, 0, 0.696));
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+main {
+  background: white;
+  width: 44%;
+  height: 41rem;
+  margin: 0 auto;
+  margin-top: 5rem;
+  border-radius: 0.2rem;
+  padding: 0.3rem 0.5rem;
+}
+main #form h1 {
+  display: block;
+  text-align: center;
+  margin: 1rem;
+}
+main #form h1 img#titleID {
+  width: 2rem;
+  margin-bottom: -0.2rem;
+}
+main #form div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+main #form div div#form_fields {
+  width: 75%;
+  margin: 1rem auto;
+  border-radius: 2rem;
+  border: 0.1rem solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+main #form div div#form_fields input,
+main #form div div#form_fields button {
+  font-size: large;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 400;
+}
+main #form div div#form_fields input {
+  width: 100%;
+  border-top-left-radius: 5rem;
+  border-bottom-left-radius: 5rem;
+  padding: 0.5rem 0 0.5rem 1rem;
+}
+main #form div div#form_fields button {
+  border-top-left-radius: 5rem;
+  border-bottom-left-radius: 5rem;
+  border-top-right-radius: 5rem;
+  border-bottom-right-radius: 5rem;
+  background: orange;
+  padding: 0.5rem 2rem;
+}
+main #form div button#cats {
+  position: absolute;
+  background: orange;
+  font-size: large;
+  font-family: fantasy;
+  padding: 0.6rem 0.8rem;
+  top: 1rem;
+  right: 0.5rem;
+  border-radius: 100%;
+}
+main ul#todos {
+  width: 100%;
+  height: 30rem;
+  overflow: scroll;
+  padding: 0 5rem;
+}
+main ul#todos li.checked span.todo_span {
+  text-decoration: line-through;
+}
+main ul#todos li.checked span.todo_span::before {
+  content: "";
+  position: absolute;
+  top: 0.5rem;
+  left: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: url("../images/checked.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main ul#todos li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.2rem 0;
+  position: relative;
+}
+main ul#todos li span.todo_span {
+  width: 100%;
+  cursor: pointer;
+  padding: 0.6rem 0;
+  margin-left: 2.2rem;
+}
+main ul#todos li span.todo_span::before {
+  content: "";
+  position: absolute;
+  top: 0.5rem;
+  left: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: url("../images/unchecked.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main ul#todos li button.close_icon {
+  background: transparent;
+  cursor: pointer;
+  padding: 0.5rem;
+  font-size: larger;
+  transition: all 550ms;
+  transform: rotate(0deg);
+}
+main ul#todos li button.close_icon:hover {
+  transform: rotate(90deg);
+  color: red;
+}
+main ul#todos::-webkit-scrollbar {
+  width: 0.6rem;
+}
+main ul#todos::-webkit-scrollbar-thumb {
+  background: orange;
+  border-radius: 2rem;
+  cursor: pointer;
+  -webkit-transition: all 550ms;
+  transition: all 550ms;
+}
+main ul#todos::-webkit-scrollbar-thumb:hover {
+  background: orangered;
+}
+main ul#todos::-webkit-scrollbar-track {
+  background: transparent;
+}
+main div#noItems p {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: larger;
+  margin-bottom: 1.2rem;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+main .hide {
+  display: none !important;
+}
