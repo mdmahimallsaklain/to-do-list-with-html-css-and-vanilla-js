@@ -7,6 +7,11 @@
   border: none;
 }
 
+button,
+a {
+  cursor: pointer;
+}
+
 body {
   background: linear-gradient(54deg, green, rgba(0, 0, 255, 0.515), rgba(255, 166, 0, 0.696));
   width: 100%;
@@ -17,18 +22,7 @@ body {
   align-items: center;
   overflow: hidden;
 }
-
-button,
-a {
-  cursor: pointer;
-}
-
-a {
-  color: white;
-  text-decoration: none;
-}
-
-main {
+body main {
   background: white;
   width: 44%;
   height: 41rem;
@@ -37,23 +31,23 @@ main {
   border-radius: 0.2rem;
   padding: 0.3rem 0.5rem;
 }
-main #form h1 {
+body main #form h1 {
   display: block;
   text-align: center;
   margin: 1rem;
 }
-main #form h1 img#titleID {
+body main #form h1 img#titleID {
   width: 2rem;
   margin-bottom: -0.2rem;
 }
-main #form div {
+body main #form div {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   position: relative;
 }
-main #form div div#form_fields {
+body main #form div div#form_fields {
   width: 75%;
   margin: 1rem auto;
   border-radius: 2rem;
@@ -63,19 +57,19 @@ main #form div div#form_fields {
   justify-content: space-between;
   align-items: center;
 }
-main #form div div#form_fields input,
-main #form div div#form_fields button {
+body main #form div div#form_fields input,
+body main #form div div#form_fields button {
   font-size: large;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-weight: 400;
 }
-main #form div div#form_fields input {
+body main #form div div#form_fields input {
   width: 100%;
   border-top-left-radius: 5rem;
   border-bottom-left-radius: 5rem;
   padding: 0.5rem 0 0.5rem 1rem;
 }
-main #form div div#form_fields button {
+body main #form div div#form_fields button {
   border-top-left-radius: 5rem;
   border-bottom-left-radius: 5rem;
   border-top-right-radius: 5rem;
@@ -83,7 +77,7 @@ main #form div div#form_fields button {
   background: orange;
   padding: 0.5rem 2rem;
 }
-main #form div button#cats {
+body main #form div button#cats {
   position: absolute;
   background: orange;
   font-size: large;
@@ -93,16 +87,16 @@ main #form div button#cats {
   right: 0.5rem;
   border-radius: 100%;
 }
-main ul#todos {
+body main ul#todos {
   width: 100%;
   height: 30rem;
   overflow: scroll;
   padding: 0 5rem;
 }
-main ul#todos li.checked span.todo_span {
+body main ul#todos li.checked span.todo_span {
   text-decoration: line-through;
 }
-main ul#todos li.checked span.todo_span::before {
+body main ul#todos li.checked span.todo_span::before {
   content: "";
   position: absolute;
   top: 0.5rem;
@@ -114,7 +108,7 @@ main ul#todos li.checked span.todo_span::before {
   background-repeat: no-repeat;
   background-size: cover;
 }
-main ul#todos li {
+body main ul#todos li {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -122,13 +116,13 @@ main ul#todos li {
   margin: 1.2rem 0;
   position: relative;
 }
-main ul#todos li span.todo_span {
+body main ul#todos li span.todo_span {
   width: 100%;
   cursor: pointer;
   padding: 0.6rem 0;
   margin-left: 2.2rem;
 }
-main ul#todos li span.todo_span::before {
+body main ul#todos li span.todo_span::before {
   content: "";
   position: absolute;
   top: 0.5rem;
@@ -140,7 +134,7 @@ main ul#todos li span.todo_span::before {
   background-repeat: no-repeat;
   background-size: cover;
 }
-main ul#todos li button.close_icon {
+body main ul#todos li button.close_icon {
   background: transparent;
   cursor: pointer;
   padding: 0.5rem;
@@ -148,27 +142,27 @@ main ul#todos li button.close_icon {
   transition: all 550ms;
   transform: rotate(0deg);
 }
-main ul#todos li button.close_icon:hover {
+body main ul#todos li button.close_icon:hover {
   transform: rotate(90deg);
   color: red;
 }
-main ul#todos::-webkit-scrollbar {
+body main ul#todos::-webkit-scrollbar {
   width: 0.6rem;
 }
-main ul#todos::-webkit-scrollbar-thumb {
+body main ul#todos::-webkit-scrollbar-thumb {
   background: orange;
   border-radius: 2rem;
   cursor: pointer;
   -webkit-transition: all 550ms;
   transition: all 550ms;
 }
-main ul#todos::-webkit-scrollbar-thumb:hover {
+body main ul#todos::-webkit-scrollbar-thumb:hover {
   background: orangered;
 }
-main ul#todos::-webkit-scrollbar-track {
+body main ul#todos::-webkit-scrollbar-track {
   background: transparent;
 }
-main div#noItems p {
+body main div#noItems p {
   display: block;
   width: 100%;
   text-align: center;
@@ -176,6 +170,40 @@ main div#noItems p {
   margin-bottom: 1.2rem;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
-main .hide {
+body main .hide {
   display: none !important;
+}
+body main div#creator {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  background: #222;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: large;
+}
+body main div#creator a {
+  color: orange;
+  transition: all 500ms;
+}
+body main div#creator a:hover {
+  color: blue;
+}
+
+@media (max-width: 768px) {
+  /* For mobile phones: */
+  body {
+    background: white;
+    display: inline;
+  }
+  body main {
+    background: white;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    margin-top: 0;
+    border-radius: 0.2rem;
+    padding: 0.3rem 0.5rem;
+  }
 }
